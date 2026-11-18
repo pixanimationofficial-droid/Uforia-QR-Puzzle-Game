@@ -147,30 +147,42 @@ img{display:block;user-select:none;-webkit-user-drag:none}
 @keyframes fall{to{transform:translate3d(var(--dx),110vh,0) rotate(var(--rot))}}
 
 /* ---------- UNDANGAN ---------- */
-#invite .welcome{font-family:var(--disp);font-size:20px;letter-spacing:3px;color:var(--teal);margin-top:2vh}
-#invite .logo{width:min(80vw,350px);margin:4px 0 6px;animation:bob 3s ease-in-out infinite}
-.result{font-size:14px;font-weight:600;background:rgba(253,236,200,.12);border:2px dashed rgba(253,236,200,.4);border-radius:12px;padding:8px 14px;text-align:center;margin-bottom:14px}
+#invite .welcome{font-family:var(--disp);font-size:18px;letter-spacing:3px;color:var(--teal);margin-top:0}
+#invite .logo{width:min(58vw,236px);margin:0 0 6px;animation:bob 3s ease-in-out infinite}
+.result{font-size:13px;font-weight:600;background:rgba(253,236,200,.12);border:2px dashed rgba(253,236,200,.4);border-radius:12px;padding:6px 14px;text-align:center;margin-bottom:10px}
 .result b{color:var(--yellow)}
-.lu-title{font-family:var(--disp);font-size:16px;letter-spacing:2px;color:var(--yellow);margin:2px 0 10px}
-.lu{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%}
-.lu .it{display:flex;align-items:center;gap:8px;background:var(--cream);border:3px solid var(--navy);border-radius:12px;padding:6px;box-shadow:3px 4px 0 var(--pink)}
-.lu .it:nth-child(even){box-shadow:3px 4px 0 var(--teal)}
-.lu .it .av{width:46px;height:46px;border-radius:50%;overflow:hidden;flex:none;border:2px solid var(--navy)}
-.lu .it .av img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
-.lu .it .n{flex:1;display:flex;align-items:center;justify-content:center;min-width:0;height:40px}
-.lu .it .n img{max-height:34px;max-width:100%;object-fit:contain}
-.lu .it .n span{font-family:var(--disp);color:var(--navy);font-size:13px;line-height:1.05;text-align:center}
-.ticket{position:relative;width:100%;margin:18px 0 6px;background:var(--yellow);color:var(--navy);border-radius:16px;border:3px solid var(--navy);
-  box-shadow:6px 7px 0 var(--pink);display:flex;overflow:hidden}
-.ticket::before,.ticket::after{content:"";position:absolute;left:62%;width:22px;height:22px;border-radius:50%;background:var(--navy);margin-left:-11px}
-.ticket::before{top:-12px} .ticket::after{bottom:-12px}
-.ticket .d{flex:0 0 62%;padding:14px 14px 14px 16px;border-right:3px dashed var(--navy)}
-.ticket .p{flex:1;padding:14px 12px;display:flex;flex-direction:column;justify-content:center}
-.ticket small{display:block;font-size:11px;font-weight:800;letter-spacing:2px;opacity:.75}
-.ticket .big{font-family:var(--disp);font-size:30px;line-height:.95;margin:4px 0 2px}
-.ticket .mid{font-family:var(--disp);font-size:16px;line-height:1.05;margin-top:4px}
-.ticket .sub{font-size:12px;font-weight:600;margin-top:4px}
-.share{font-size:12px;color:#e9d6b7;text-align:center;margin:10px 0 14px}
+.gs-chip{font-family:var(--disp);font-size:15px;letter-spacing:2px;color:var(--navy);background:var(--yellow);border:3px solid var(--navy);
+  border-radius:999px;padding:6px 16px;box-shadow:3px 3px 0 var(--pink);margin:0 0 12px;transform:rotate(-2deg)}
+.gs{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%}
+.gsc{position:relative;background:var(--cream);border:3px solid var(--navy);border-radius:16px;padding:7px 7px 0;
+  box-shadow:6px 7px 0 var(--pink);transform:rotate(-2.5deg);animation:gsin .6s cubic-bezier(.2,1.4,.4,1) both}
+.gsc.r{box-shadow:6px 7px 0 var(--teal);transform:rotate(2.5deg);animation-delay:.15s}
+@keyframes gsin{from{opacity:0;transform:scale(.5) rotate(-14deg)}}
+.gsc .ph{border-radius:10px;overflow:hidden;aspect-ratio:4/5;background:#ccc}
+.gsc .ph img{width:100%;height:100%;object-fit:cover}
+.gsc .nm{height:52px;display:flex;align-items:center;justify-content:center;padding:4px}
+.gsc .nm img{max-height:46px;max-width:94%;object-fit:contain}
+.gsc .star{position:absolute;top:-12px;left:-10px;width:34px;height:34px;border-radius:50%;background:var(--yellow);border:3px solid var(--navy);
+  display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--navy);transform:rotate(-12deg)}
+.also{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.also small{width:100%;text-align:center;font-size:11px;font-weight:800;letter-spacing:3px;color:var(--teal)}
+.pill{display:flex;align-items:center;gap:7px;background:rgba(253,236,200,.12);border:2px solid rgba(253,236,200,.45);border-radius:999px;padding:4px 12px 4px 4px}
+.pill img{width:30px;height:30px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:2px solid var(--cream)}
+.pill span{font-family:var(--disp);font-size:13px;color:var(--cream)}
+.date{position:relative;width:100%;margin:20px 0 4px;padding:14px 14px 16px;border-radius:20px;text-align:center;overflow:hidden;
+  background:var(--navy2);border:3px solid var(--cream);box-shadow:0 0 0 4px var(--pink),0 0 0 8px var(--teal),0 0 0 12px var(--yellow)}
+.date::before{content:"";position:absolute;left:-10%;right:-10%;top:58%;height:42px;transform:rotate(-8deg);opacity:.9;
+  background:linear-gradient(180deg,var(--pink) 0 33%,var(--teal) 33% 66%,var(--yellow) 66% 100%)}
+.date>*{position:relative}
+.date .day{font-family:var(--disp);font-size:13px;letter-spacing:2px;color:var(--teal)}
+.date .dn{display:flex;align-items:center;justify-content:center;gap:12px;margin:2px 0 6px}
+.date .n31{font-family:var(--disp);font-size:clamp(80px,25vw,104px);line-height:.85;color:var(--yellow);text-shadow:4px 4px 0 var(--pink),8px 8px 0 #0d0b2a}
+.date .mon{font-family:var(--disp);font-size:clamp(24px,7.4vw,32px);line-height:.95;color:var(--cream);text-align:left;text-shadow:3px 3px 0 #0d0b2a}
+.date .venue{display:inline-block;font-family:var(--disp);font-size:clamp(13px,4vw,16px);color:var(--navy);background:var(--cream);
+  border:3px solid var(--navy);border-radius:12px;padding:8px 12px;box-shadow:3px 3px 0 var(--pink);margin-top:6px;line-height:1.15}
+.date .venue small{display:block;font-family:var(--body);font-weight:800;font-size:12px;letter-spacing:1px;margin-top:2px}
+.date .sp{position:absolute;font-size:18px;color:var(--yellow);animation:twinkle 2.4s ease-in-out infinite}
+.share{font-size:12px;color:#e9d6b7;text-align:center;margin:12px 0 10px}
 .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .mute{position:fixed;z-index:8;bottom:max(12px,env(safe-area-inset-bottom));right:12px;width:38px;height:38px;border-radius:50%;
   background:rgba(22,19,61,.7);border:2px solid var(--cream);font-size:17px;display:flex;align-items:center;justify-content:center}
@@ -234,11 +246,20 @@ img{display:block;user-select:none;-webkit-user-drag:none}
     <div class="welcome">WELCOME TO</div>
     <img class="logo" src="a/uforia.webp" alt="UFORIA">
     <div class="result" id="result"></div>
-    <div class="lu-title">✦ LINE UP ✦</div>
-    <div class="lu" id="lu"></div>
-    <div class="ticket">
-      <div class="d"><small>KAMIS</small><div class="big">31 DES</div><div class="sub">2026 · Malam Tahun Baru</div></div>
-      <div class="p"><small>VENUE</small><div class="mid">CHASE PLAZA</div><div class="sub">Sudirman, Jakarta</div></div>
+    <div class="gs-chip">★ GUEST STAR ★</div>
+    <div class="gs">
+      <div class="gsc l"><span class="star">★</span><div class="ph"><img src="a/gs-ran.webp" alt="RAN"></div><div class="nm"><img src="a/logo-ran.webp" alt="RAN"></div></div>
+      <div class="gsc r"><span class="star">★</span><div class="ph"><img src="a/gs-adrian.webp" alt="Adrian Khalif"></div><div class="nm"><img src="a/logo-adrian.webp" alt="Adrian Khalif"></div></div>
+    </div>
+    <div class="also"><small>JUGA TAMPIL</small>
+      <div class="pill"><img src="a/card-angels.webp" alt=""><span>THE ANGELS</span></div>
+      <div class="pill"><img src="a/card-dj.webp" alt=""><span>DJ THROOPER</span></div>
+    </div>
+    <div class="date">
+      <span class="sp" style="top:12px;left:16px">✦</span><span class="sp" style="top:20px;right:18px;animation-delay:.9s;color:var(--pink)">✦</span>
+      <div class="day">KAMIS · MALAM TAHUN BARU</div>
+      <div class="dn"><span class="n31">31</span><span class="mon">DESEMBER<br>2026</span></div>
+      <div class="venue">CHASE PLAZA<small>SUDIRMAN, JAKARTA</small></div>
     </div>
     <p class="share">Screenshot undangan ini dan ajak temanmu!</p>
     <div class="row">
@@ -424,16 +445,13 @@ function openInvite(){
   $('result').innerHTML = lr.win
     ? `Mantap! Kostum <b>${lr.name}</b> rapi dalam <b>${lr.used.toFixed(1).replace('.',',')} detik</b>.`
     : `Hampir! Kostum <b>${lr.name}</b> sudah dirapikan. Sampai jumpa di panggung!`;
-  const lu=$('lu'); lu.innerHTML='';
-  PERF.forEach(p=>{ const d=document.createElement('div'); d.className='it';
-    d.innerHTML=`<div class="av"><img src="a/card-${p.id}.webp" alt=""></div><div class="n">${nameHTML(p)}</div>`; lu.appendChild(d); });
   show('invite'); $('invite').scrollTop=0;
   setTimeout(()=>play('welcome'),400);
 }
 $('btnAgain').addEventListener('click',()=>{ initAudio(); play('tap'); openLineup(); });
 
 // preload sprite puzzle setelah halaman tampil
-window.addEventListener('load',()=>setTimeout(()=>PERF.forEach(p=>{ const i=new Image(); i.src=`a/pz-${p.id}.webp`; const j=new Image(); j.src=`a/card-${p.id}.webp`; }),300));
+window.addEventListener('load',()=>setTimeout(()=>{ PERF.forEach(p=>{ const i=new Image(); i.src=`a/pz-${p.id}.webp`; const j=new Image(); j.src=`a/card-${p.id}.webp`; }); ['ran','adrian'].forEach(k=>{ const g=new Image(); g.src=`a/gs-${k}.webp`; }); },300));
 })();
 </script>
 </body>
