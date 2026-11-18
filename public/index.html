@@ -288,8 +288,9 @@ const SFX = ['tap','ok','win','tick','lose','reveal','welcome'];
 function initAudio(){
   if(ac) { if(ac.state==='suspended') ac.resume(); return; }
   try{ ac = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return; }
-  SFX.forEach(n => fetch('a/sfx/'+n+'.mp3').then(r => r.ok ? r.arrayBuffer() : Promise.reject())
-    .then(b => new Promise((res,rej)=>ac.decodeAudioData(b,res,rej))).then(d => buf[n]=d).catch(()=>{}));
+  SFX.forEach(n => fetch('a/sfx/'+n+'.mp3')
+    .then(r => (r.ok && /audio|mpeg|octet/.test(r.headers.get('content-type')||'')) ? r.arrayBuffer() : Promise.reject())
+    .then(b => { const p=ac.decodeAudioData(b); return p; }).then(d => { buf[n]=d; }).catch(()=>{}));
 }
 function tone(f,t0,d,type,v,f2){
   const o=ac.createOscillator(), g=ac.createGain(); o.type=type; o.frequency.setValueAtTime(f,t0);
