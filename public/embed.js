@@ -2,7 +2,7 @@
   UFORIA · Salah Kostum! Embed
   Pasang di website mana pun dengan satu baris:
 
-    <script src="https://ALAMAT-GAME/embed.js" async></script>
+    <script src="https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/embed.js" async></script>
 
   Game muncul tepat di tempat script itu ditaruh. Opsi lewat atribut:
     data-max-width="440"   lebar maksimal dalam piksel (default 440)

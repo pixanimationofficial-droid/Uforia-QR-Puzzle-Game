@@ -33,7 +33,7 @@ Tes lokal tanpa Cloudflare: `cd public && python3 -m http.server 8080`, lalu buk
 **Cara 1, satu baris script** (paling gampang, game muncul di posisi script):
 
 ```html
-<script src="https://ALAMAT-GAME/embed.js" async></script>
+<script src="https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/embed.js" async></script>
 ```
 
 Opsi: `data-max-width="440"`, `data-radius="18"`, `data-target="#id-elemen"`.
@@ -42,21 +42,21 @@ Opsi: `data-max-width="440"`, `data-radius="18"`, `data-target="#id-elemen"`.
 
 ```html
 <div style="position:relative;width:100%;max-width:440px;margin:0 auto;aspect-ratio:9/16;min-height:560px;border-radius:18px;overflow:hidden">
-  <iframe src="https://ALAMAT-GAME/?embed=1" title="UFORIA Salah Kostum"
+  <iframe src="https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/?embed=1" title="UFORIA Salah Kostum"
     style="position:absolute;inset:0;width:100%;height:100%;border:0"
     allow="autoplay; fullscreen" loading="lazy"></iframe>
 </div>
 ```
 
-**Cara 3, link atau QR**: bagikan `https://ALAMAT-GAME/`.
+**Cara 3, link atau QR**: bagikan `https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/`.
 
-Contoh hidup ada di `https://ALAMAT-GAME/embed-demo.html`.
+Contoh hidup ada di `https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/embed-demo.html`.
 
 ## QR untuk alamat baru
 
 ```bash
 pip install qrcode pillow fonttools brotli
-python3 tools/qrposter.py https://ALAMAT-GAME/
+python3 tools/qrposter.py https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/
 ```
 
 Hasilnya `qr/UFORIA-QR.png` (polos, untuk cetak) dan `qr/UFORIA-QR-poster.png` (1080x1350, gaya retro). Scan sekali dengan HP sebelum dicetak.
