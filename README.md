@@ -23,7 +23,7 @@ Situs statis murni (HTML, CSS, JS tanpa framework, tanpa build). Total sekitar 4
 
 1. Dashboard Cloudflare, **Workers & Pages**, **Create**, **Import a repository**, pilih repo ini.
 2. Build command dikosongkan, deploy command `npx wrangler deploy`.
-3. Setelah jadi, alamatnya `https://uforia-salah-kostum.<akun>.workers.dev/`. Setiap push ke `main` otomatis deploy ulang.
+3. Setelah jadi, alamatnya `https://uforia-qr-puzzle-game.pixanimation-official.workers.dev/`. Setiap push ke `main` otomatis deploy ulang.
 4. Mau pakai domain sendiri (misalnya `main.uforia.id`): atur Custom Domain di pengaturan Worker.
 
 Tes lokal tanpa Cloudflare: `cd public && python3 -m http.server 8080`, lalu buka `http://localhost:8080/`.
