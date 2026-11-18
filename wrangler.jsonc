@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Situs statis murni: tidak ada kode server, Cloudflare hanya menyajikan folder public/.
+  // Deploy: hubungkan repo ini di dashboard Cloudflare (Workers & Pages > Create > Import a repository),
+  // atau jalankan `npx wrangler deploy` setelah `npx wrangler login`.
+  "name": "uforia-salah-kostum",
+  "compatibility_date": "2025-05-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  }
+}

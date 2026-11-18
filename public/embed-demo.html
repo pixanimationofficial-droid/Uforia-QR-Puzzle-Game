@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contoh pasang game UFORIA di website</title>
+<style>
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:760px;margin:40px auto;padding:0 18px;color:#222;line-height:1.55}
+  h1{font-size:24px} h2{font-size:18px;margin-top:32px}
+  pre{background:#f4f1ea;border-radius:10px;padding:14px;overflow:auto;font-size:13px}
+  .demo{margin:24px 0}
+</style>
+</head>
+<body>
+<h1>Contoh website yang memasang game UFORIA</h1>
+<p>Halaman ini pura-pura jadi website orang lain. Game di bawah dipasang pakai satu baris script.</p>
+
+<div class="demo">
+  <script src="embed.js" async></script>
+</div>
+
+<h2>Cara 1: satu baris script (paling gampang)</h2>
+<pre>&lt;script src="https://ALAMAT-GAME/embed.js" async&gt;&lt;/script&gt;</pre>
+
+<h2>Cara 2: iframe biasa (untuk CMS yang tidak mengizinkan script)</h2>
+<pre>&lt;div style="position:relative;width:100%;max-width:440px;margin:0 auto;aspect-ratio:9/16;min-height:560px;border-radius:18px;overflow:hidden"&gt;
+  &lt;iframe src="https://ALAMAT-GAME/?embed=1" title="UFORIA Salah Kostum"
+    style="position:absolute;inset:0;width:100%;height:100%;border:0"
+    allow="autoplay; fullscreen" loading="lazy"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+
+<h2>Cara 3: link atau QR</h2>
+<pre>https://ALAMAT-GAME/</pre>
+</body>
+</html>
